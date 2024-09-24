@@ -16,15 +16,16 @@ This project uses the DINO (DETR with Improved DeNoising Anchor Boxes) model for
 3. Modify the following files:
    - `DINO_4scale.py`
    - `engine.py`
+   - `slconfig.py`
    - `main.py`
-   - Update the numpy part inside the `lib` folder (similar to the Colab implementation)
-   - Change `json` to `json_val` and `json_train` where appropriate
+   - Update the numpy part from float to float64 inside the `/usr` folder (Colab implementation)
+   - Seperate `json` to `json_val` and `json_train` [Follow the IPYNB for more detailed implementation] 
 
 ## Pre-trained Model
 
 Download the DINO checkpoint for evaluation:
 - URL: [https://drive.google.com/drive/folders/1qD5m1NmK0kjE5hh-G17XUX751WsEG-h_](https://drive.google.com/drive/folders/1qD5m1NmK0kjE5hh-G17XUX751WsEG-h_)
-- File: `checkpoint0033_4scale.pth` (12 epoch with ResNet-50 backbone)
+- File: `checkpoint0033_4scale.pth` (DINO-4scale trained on 12 epoch with ResNet-50 backbone)
 
 ## Evaluation
 
@@ -68,5 +69,5 @@ To test the fine-tuned model on the validation set, use the same evaluation comm
 
 ## Additional Information
 
-For more detailed information on how the code works, please refer to the IPYNB file in the repository.
+For more detailed information on how the code works, please refer to the IPYNB file in the repository and for detailed report on experiment go through the - `report.pdf`
 
